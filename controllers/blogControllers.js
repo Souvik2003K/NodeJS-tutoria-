@@ -57,5 +57,7 @@ const blogDelete = (req, res) => {
 
 
 module.exports = {
-    blogList, blogCreatePost, blogCreateGet, blogDetails, blogDelete
+    blogList, blogCreatePost, 
+    // blogCreateGet, 
+    blogDetails, blogDelete
 }

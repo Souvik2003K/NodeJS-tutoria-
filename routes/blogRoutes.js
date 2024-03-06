@@ -11,7 +11,7 @@ router.post('/', blogController.blogCreatePost);
 
 
 // blog creating routing
-router.get('/create', blogController.blogCreateGet);
+// router.get('/create', blogController.blogCreateGet);
 
 
 // getting the blog in detail
