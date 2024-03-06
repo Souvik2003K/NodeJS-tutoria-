@@ -14,7 +14,8 @@ const blogCreatePost = (req, res) => {
     try{
         const blog = new Blog(req.body);
         blog.save().then((result) => {
-            res.redirect('/blog');
+            // res.redirect('/blog');
+            res.json({ "msg": 'blog created successfully' });
         }).catch((err) => {
             console.log(err);
         });
@@ -24,9 +25,9 @@ const blogCreatePost = (req, res) => {
 }
 
 
-const blogCreateGet = (req, res) => {
-    res.render('create');
-}
+// const blogCreateGet = (req, res) => {
+//     res.render('create');
+// }
 
 
 const blogDetails = (req, res) => {
@@ -48,7 +49,7 @@ const blogDetails = (req, res) => {
 const blogDelete = (req, res) => {
     const id = req.params.id;
     Blog.findByIdAndDelete(id).then((result) =>{
-        res.json({ redirect: '/blog' });
+        res.json({ "msg": 'blog successfully deleted' });
     }).catch(err => {
         console.log('err in app',err);
     })
